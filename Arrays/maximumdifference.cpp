@@ -1,18 +1,22 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void maximumdifference(int arr[], int n){
+void maximumdifference(int arr[], int n)
+{
   int minElement = arr[0];
   int result = arr[1] - arr[0];
-  for(int i = 1; i <n; i++){
+  for (int i = 1; i < n; i++)
+  {
     int difference = arr[i] - minElement;
-    if(difference > result){
+    if (difference > result)
+    {
       result = difference;
     }
-    if(arr[i] < minElement){
+    if (arr[i] < minElement)
+    {
       minElement = arr[i];
     }
   }
-  cout<<result;
+  cout << result;
 }
 // void maximumdifference(int arr[], int n){
 //   int differ = arr[1]-arr[0];
@@ -25,15 +29,17 @@ void maximumdifference(int arr[], int n){
 //   }
 //   cout<<differ<<endl;
 // }//O(n^2) solution
-int main(){
+int main()
+{
   int n;
-  cout<<"Enter the number of elements"<<endl;
-  cin>>n;
+  cout << "Enter the number of elements" << endl;
+  cin >> n;
   int arr[n];
-  cout<<"Enter the elements of array"<<endl;
-  for(int i=0; i<n; i++){
-    cin>>arr[i];
+  cout << "Enter the elements of array" << endl;
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
   }
-  maximumdifference(arr,n);
+  maximumdifference(arr, n);
   return 0;
 }
